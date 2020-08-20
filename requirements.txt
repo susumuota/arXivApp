@@ -1,0 +1,11 @@
+flask
+requests
+arxiv
+gunicorn
+numpy
+pandas
+tweepy
+boto3
+git+https://github.com/slackapi/bolt-python.git
+slack_sdk
+s3-memoize
