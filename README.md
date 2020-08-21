@@ -193,7 +193,7 @@ heroku/python
 
 ### Heroku 環境変数設定
 
-以前メモした Slack App の 設定を環境変数 `SLACK_BOT_TOKEN`, `SLACK_SIGNING_SECRET` で設定しておきます. DeepL API を使う場合は, 同様に `DEEPL_AUTH_KEY` も設定しておきます.
+以前メモした Slack App の 設定を環境変数 `SLACK_BOT_TOKEN`, `SLACK_SIGNING_SECRET` で設定しておきます. 同様に `DEEPL_AUTH_KEY`, `TWITTER_API_KEY`, `TWITTER_API_SECRET_KEY`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` も設定しておきます.
 
 以下ページを参考に, Heroku 側での環境変数を設定します.
 
@@ -270,13 +270,15 @@ git push heroku master # Heroku にアップロードされてコードが更新
 
 ## TODO
 
-- app.json
-- Bolt for Python
-
+- [ ] app.json
+- [x] Bolt for Python
+- [ ] AWS Lambda
+- [ ] Google Cloud Functions
 
 ## 参考
 
-- https://api.slack.com/bot-users
+- https://slack.dev/bolt-js/ja-jp/tutorial/getting-started
+- https://github.com/slackapi/bolt-python
 - https://github.com/slackapi/python-slack-events-api
 - https://www.deepl.com/docs-api/introduction/
 - https://devcenter.heroku.com/articles/getting-started-with-python
