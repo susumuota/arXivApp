@@ -104,7 +104,7 @@ export SLACK_BOT_TOKEN="xoxb-nnn..."
 export SLACK_SIGNING_SECRET="xxx..."
 ```
 
-DeepL API を使う場合は, 同様に `DEEPL_AUTH_KEY` も設定しておきます.
+同様に `DEEPL_AUTH_KEY`, `TWITTER_API_KEY`, `TWITTER_API_SECRET_KEY`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` も設定しておきます.
 
 
 ローカル環境の設定と動作確認を以下のようにします. ngrok が必要です.
@@ -117,7 +117,7 @@ cd arXivApp
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python run.py
+python app.py
 # 別ターミナルで
 ngrok http 3000
 ```
@@ -153,7 +153,7 @@ message.groups
 
 Slack の arXivApp を招待したチャンネルで `https://arxiv.org/abs/2005.05960` と発言してみてボットの返答がスレッドでつけばローカル環境でのテストは完了です.
 
-テストが終わったらngrok と run.py を Ctrl-C で終了しておきます.
+テストが終わったらngrok と app.py を Ctrl-C で終了しておきます.
 
 
 ## Heroku での設定
@@ -255,7 +255,7 @@ Slack の arXivApp を招待したチャンネルで `https://arxiv.org/abs/2005
 ```sh
 # ローカルでテスト
 # コードを変更
-python run.py
+python app.py
 ngrok http 3000
 # Slack App の設定で Features > Event Subscriptions, Enable Events > Request URL を ngrok の URL に変更
 # Slack で動作確認
